@@ -24,8 +24,7 @@ MAX_NEW_TOKENS = 64
 SYSTEM_PROMPT = (
     "You are a precise puzzle solver. Given input-output examples showing a hidden rule, "
     "discover the rule and apply it to the new input. "
-    "Output the rule on the first line starting with 'Rule:', "
-    "then the answer on the next line inside \\boxed{}."
+    "Output only the final answer inside \\boxed{}. Do not explain your reasoning."
 )
 
 

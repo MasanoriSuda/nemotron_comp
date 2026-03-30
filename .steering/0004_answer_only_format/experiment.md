@@ -5,10 +5,11 @@
 モデルが推論文を出力せず\boxed{answer}のみを返すようになりスコアが上がる。
 
 ## 設定
+
 | パラメータ | 変更前(v76) | 変更後 |
 |-----------|------------|--------|
 | SYSTEM_PROMPT | "...Output your answer inside \boxed{}." | "...Output only the final answer inside \boxed{}. Do not explain your reasoning." |
-| user content | row['prompt'] | row['prompt'] + "\nReturn only the final answer." |
+| user content | row['prompt'] | row['prompt']（変更なし） |
 | MAX_TRAIN_SAMPLES | None | 3000（クイック検証） |
 | MAX_SEQ_LEN | 512(v78) | **1024**（戻す） |
 | FAST_ITER | False | True |
