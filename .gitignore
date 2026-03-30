@@ -1,0 +1,29 @@
+# Kaggle competition data (not allowed to publish)
+train.csv
+test.csv
+*.zip
+
+# Large model files
+models/
+offload_tmp/
+adapters/
+lora_adapter/
+
+# Wheel files and runtimes
+wheels_*/
+pytorch_nightly/
+pytorch_runtime_cu128/
+build-wheels/
+
+# Claude Code personal data
+.claude/projects/
+.claude/settings.json
+.claude/settings.local.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp / local results (moved to .steering)
+result/

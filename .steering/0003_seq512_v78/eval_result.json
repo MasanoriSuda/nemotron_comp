@@ -1,0 +1,3373 @@
+{
+  "overall": {
+    "total": 475,
+    "correct": 61,
+    "accuracy": 12.84,
+    "boxed_rate": 16.63
+  },
+  "by_type": {
+    "Bit Manipulation": {
+      "total": 88,
+      "correct": 0,
+      "accuracy": 0.0,
+      "boxed_rate": 0.0
+    },
+    "Equation Transformation": {
+      "total": 64,
+      "correct": 0,
+      "accuracy": 0.0,
+      "boxed_rate": 0.0
+    },
+    "Gravitational Constant": {
+      "total": 89,
+      "correct": 0,
+      "accuracy": 0.0,
+      "boxed_rate": 2.25
+    },
+    "Number Base Conversion": {
+      "total": 80,
+      "correct": 61,
+      "accuracy": 76.25,
+      "boxed_rate": 96.25
+    },
+    "Text Encryption": {
+      "total": 74,
+      "correct": 0,
+      "accuracy": 0.0,
+      "boxed_rate": 0.0
+    },
+    "Unit Conversion": {
+      "total": 80,
+      "correct": 0,
+      "accuracy": 0.0,
+      "boxed_rate": 0.0
+    }
+  },
+  "details": [
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary string. Output also 8-bit? Actually outputs shown are 8 bits? Let's count: Example: 01001000 -> 10100100 (8 bits). Yes output",
+      "target": "11100111"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rules from examples. Input strings like \"<[+&< = <[&<\". So they take an expression and produce something else? Actually examples show left side is something like \"<[+&<\" and right side is \"<[&<\". So they seem to be removing the \"+",
+      "target": "\\&[["
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXV",
+      "target": "XXV"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 26.92 -> 37.82, 38.94 -> 54.71, 34.29 -> 48.18. Looks like multiply by approx 1.40",
+      "target": "20.72"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We have 8-bit input, output also 8-bit? Actually outputs shown are 8 bits? Let's count: example \"10100110 -> 01111010\". Input 8 bits,",
+      "target": "10010110"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We have 8-bit input, output also 8-bit? Let's check lengths: Input 01001011 -> output 01100111 (8 bits). 00100000",
+      "target": "00000111"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to apply same hidden rule. Possibly they",
+      "target": "{/\""
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LVI",
+      "target": "LVI"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find transformation",
+      "target": "01000000"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "So each letter is shifted? Let's see",
+      "target": "wizard follows inside wonderland"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule from examples. Input strings like \"!)%)#\" output \"|^{\". Let's map characters: maybe each character maps to something? Let's list characters used: ! ) % ) # etc. Output seems to be some combination of symbols: |^{ etc. Let's examine each example",
+      "target": "|!^{"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCV",
+      "target": "XCV"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit. It seems output is formed by taking the last 4 bits of input and moving them to front? Let's test: Input 01001000 -> last 4 bits =",
+      "target": "10010011"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1) 11011",
+      "target": "00000101"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's check: 11000000 -> 00110000 (8 bits). Yes output is 8 bits.",
+      "target": "10111011"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCVIII",
+      "target": "XCVIII"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. The examples: 90%58 = 149. That's addition? 90+58 = 148, but result is 149, so maybe addition plus 1? 90+58 = 148",
+      "target": "119"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=3.73 ->130.0; t=2.52->59.34; t=2.11->41.6. Let's verify ratio: 130/(",
+      "target": "183.37"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 11.36 -> 22.65, 22.33 -> 44.52, 39.61 -> 78.97, 10.34 -> 20",
+      "target": "77.53"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "III",
+      "target": "III"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.98, we can compute using scaling from known t values. Let's compute using one reference, say t=3.43 gives 40.15. Ratio (3",
+      "target": "54.06"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.32 -> 60.49; t=4.36 -> 61.61. That's consistent with d = k * t^2. Let's compute k: 60",
+      "target": "15.26"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1:",
+      "target": "10011101"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? They show outputs like 00000000, 11000000, 10000000, 00000",
+      "target": "00000001"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Let's check lengths: Input 00100111 (8 bits) output 01001111 (8 bits). Input 100100",
+      "target": "00011010"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's see: 10011011 -> 10000100 (8 bits). Yes output is 8 bits.",
+      "target": "00000011"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"bvw\" maps to \"the\". So \"bvw\" is \"the\". \"acjzych\" maps to \"curious\". \"hfbbwj\" maps to \"hatter\". \"hbcgzwh\" maps to \"studies\". \"",
+      "target": "the ancient princess watches"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "0: 01010100 -> 00101111",
+      "target": "11101111"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example1: 00110011 -> 00010001",
+      "target": "01011100"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=3.47 -> 53.66; t=1.54 -> 10.57; t=4.69 -> 98.02; t=1.53",
+      "target": "48.82"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find hidden rule. Given examples: 73-89 = -16. That's subtraction: 73 - 89 = -16 indeed normal arithmetic. 31*47 = 78. Normal multiplication 31*47 = 145",
+      "target": "86"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.99, we can compute using scaling from known t values. Let's compute using one reference, say t=4.44 gives 159.49. Ratio (",
+      "target": "128.8"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's count: 10101110 -> 01110101 (8 bits). Yes output is 8 bits",
+      "target": "01000100"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "So \"hxrudkx\"",
+      "target": "turtle discovers through mountain"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to convert 55 to Roman numerals? The examples: 91 -> XCI (that's 91 = XC + I = 90+1). 45 -> XLV (45 = XL + V = 40+5). 94 -> XC",
+      "target": "LV"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2: 00001",
+      "target": "00011111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to apply the same rule: \"tkw\" = \"the\". \"lnztwrfecz\" = \"mysterious\". \"twgykwr\" = \"teacher\"? Let's see mapping: In previous examples, \"twgykwz\" maybe? Actually we have \"twgykwr",
+      "target": "the mysterious teacher watches"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need",
+      "target": "01111100"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 31.57 -> 51.89, 35.27 -> 57.97, 48.85 -> 80.29, 22.53 -> 37.",
+      "target": "63.44"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXXXIV",
+      "target": "LXXXIV"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 17.43 -> 11.67, 45.25 -> 30.29, 12.24 -> 8.19. So conversion factor seems to be about 0.66",
+      "target": "27.89"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.49, we can compute using scaling from known values. Let's compute using one reference: t=2.82 gives 40.75. Ratio (3.4",
+      "target": "62.41"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2. &>-:<  -> -::  (Wait output is -::<? Actually example: &",
+      "target": "<>\\>"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=2.78 -> 31.01; t=1.32 -> 6.99; t=1.49 -> 8.91. Let's compute ratio: 6.",
+      "target": "19.24"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XIV"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"knsvg htwyd sy nsiekej\" -> \"alice found in library\". So mapping: knsvg->alice, htwyd->found, sy->in, nsiekej->library. So it's a substitution cipher where each word maps to",
+      "target": "the silver knight dreams"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 11.5 -> 9.98, 21.72 -> 18.85, 5.16 -> 4.48. Likely conversion factor is something like multiply by 0.86",
+      "target": "25.33"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "So mapping:",
+      "target": "teacher studies map"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=1.14 -> 3.99; t=2.21 -> 15.01; t=2.23 -> 15.28; t=1.68 ->",
+      "target": "33.67"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 32.12 -> 31.34, 36.62 -> 35.73, 28.75 -> 28.05, 39.78 -> 38.",
+      "target": "35.99"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "29<13 = 377 (maybe 29+13=42? No. 29*1",
+      "target": "9525"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"txwhzxr vkwovaxu jlln\" -> \"teacher imagines book\". So mapping: txwhzxr -> teacher, vkwovaxu -> imagines, jlln -> book. So each word maps to English word",
+      "target": "princess sees through tower"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 21.44 -> 14.79, 16.88 -> 11.64, 8.01 -> 5.52. So conversion factor approx: output = input * (something). Let",
+      "target": "6.32"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2. `] - @ = -<` (but they wrote `] -",
+      "target": ":\"<"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output answer inside \\boxed{}",
+      "target": "59.13"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 20.19 -> 34.55, 8.75 -> 14.97, 16.29 -> 27.88, 41.51 -> 71.",
+      "target": "24.39"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. From examples, mapping seems to be substitution cipher? Let's see: \"hoq\" maps to \"the\". So h->t, o->h, q->e. \"kdudnbwu\" maps to \"colorful\". Let's map letters: k->c,",
+      "target": "mouse explores under island"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's check: 10101100 -> 01100000 (that's 8 bits). Input 11",
+      "target": "11001000"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2) 1100101",
+      "target": "10011001"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. Observations: distance seems proportional to t^2. Let's compute ratio: For t=3.48, d=48.48. t^2 = 12.1104. So g constant = d/(0.5*t^2)",
+      "target": "24.23"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Words lengths: zgwwkv (6) -> rabbit (6). d",
+      "target": "cat creates the colorful forest"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=1.33 -> 12.24; t=1.45 -> 14.55; t=3.4 -> 80.01; t=4.15 ->",
+      "target": "97.85"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 23.89 -> 29.42, 11.9 -> 14.65, 32.31 -> 39.79, 28.43 -> 35.",
+      "target": "17.41"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer hidden rule. Given examples: 46%21 = 67. That's addition? 46 + 21 = 67. Yes. 44%79 = 123, also addition: 44+79=123",
+      "target": "/19"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCII",
+      "target": "XCII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LIII",
+      "target": "LIII"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 14.06 -> 18.01, 24.54 -> 31.43, 24.45 -> 31.32. So conversion factor roughly 1.28?",
+      "target": "39.00"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXVIII",
+      "target": "XXXVIII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "59",
+      "target": "LIX"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXII",
+      "target": "XXXII"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to deduce transformation",
+      "target": "10100110"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the hidden rule. The examples involve operators: } and ^ and [ maybe? The examples: 35}22 = 13, 10^96 = 961, 66}15 = 51, 23^91 =",
+      "target": "171"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXX",
+      "target": "XXX"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Given examples: input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's see: 10111010 -> 00101110 (8 bits). 0011010",
+      "target": "10100110"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output is 8-bit? Actually outputs shown are 8 bits? Let's check: 10001101 -> 11010000 (that's 8 bits). So output is",
+      "target": "10110000"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's count: 10001000 -> 00010001 (8 bits). Yes output is 8 bits",
+      "target": "10001001"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "...",
+      "target": "LXXXIX"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "a->c? Actually \"aol\" maps to \"cat\".",
+      "target": "bird follows the curious story"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "magical queen sees: stoemtr -> magical",
+      "target": "teacher sees the dark castle"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Let's list some:",
+      "target": "10100001"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 48.47 -> 81.11, 28.42 -> 47.56, 35.86 -> 60.01. It seems they multiply by some factor approx 1.",
+      "target": "72.53"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3. /&|<:",
+      "target": ":/$^"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems like each letter is shifted? Let's see: vzuejfz -> student. That's a shift? Let's map letters: v->s, z->t, u->u, e->d, j->e, f->n, z",
+      "target": "turtle explores crystal"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule from examples. Input \"16#56 = 4693\". So # operator maybe concatenation? 16 and 56 produce 4693? Not obvious. Could be some arithmetic: 16#56 maybe means 165",
+      "target": "8544"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=2.46 -> 24.26; t=4.45 -> 79.37; t=3.93 -> 61.91. Let's verify scaling: ratio",
+      "target": "91.97"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXVI",
+      "target": "XXXVI"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, \"hqs\" maps to \"the\". So \"the\" is three letters. \"uxtasv\" maps to \"silver\". \"glfus\" -> \"mouse\". \"yvxhsu\" -> \"writes\". So mapping is straightforward substitution of words",
+      "target": "hatter discovers inside island"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 25.71 -> 47.64, 49.15 -> 91.08, 5.58 -> 10.34, 43.2 -> 80.0",
+      "target": "64.65"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXV",
+      "target": "XXV"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output is 2-bit? Actually output seems to be 2 bits followed by six zeros? Let's see: 01011111 -> 11000000 (output is \"1",
+      "target": "11000000"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1: 0",
+      "target": "01111111"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems roughly proportional to t^2. Let's compute ratio: For t=3.79, what's distance? Use examples: t=3.45 -> 109.24. t=4.06 -> 151.28",
+      "target": "131.83"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3. <\"",
+      "target": "}!||"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's check: 10111100 -> 11001111 (8 bits). Input 01011",
+      "target": "11110111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "f",
+      "target": "alice chases the curious castle"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "\"41)47 = 88\" uses parenthesis? Actually \")\"",
+      "target": "7495"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.38, compute d = 0.5*g*t^2. But we can infer from examples: maybe they use some constant g such that distances match. Let's compute using",
+      "target": "102.58"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XLI",
+      "target": "XLI"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping: \"the\" appears as \"nky\". \"creates\" appears as \"jgysnyz\". \"hidden\" appears as \"kwmmyu\". \"message\" appears as \"dyzzsqy\". \"rabbit\" appears as \"gscc",
+      "target": "the hidden alice imagines"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 26.93 -> 38.45, 37.47 -> 53.50, 30.82 -> 44.01. So mapping from meters to some other unit, maybe",
+      "target": "13.58"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": ">>*>{",
+      "target": "]{"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=3.7 -> 76.49; t=1.66 -> 15.4; t=1.19 -> 7.91; t=1.08 -> 6",
+      "target": "139.69"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 33.81 -> 18.87, 32.74 -> 18.28, 35.04 -> 19.56, 25.86 -> 14",
+      "target": "15.48"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We",
+      "target": "05"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "m->m? Actually",
+      "target": "dragon found the secret mirror"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.47 -> 122.39; t=3.17 -> 61.55; t=3.41 -> 71.22. Let's compute ratio:",
+      "target": "71.64"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 10.32 -> 15.55, 13.28 -> 20.01, 10.36 -> 15.61, 39.5 -> 59.",
+      "target": "17.66"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "qotis lfbktsl fys lsics",
+      "target": "teacher dreams the mysterious book"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule. Given examples: \"82]58 = 0832\". That's concatenation? 82 and 58 produce 0832. It seems they are concatenated with maybe leading zero? 8258? But they gave 0",
+      "target": "0001"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 9.93 -> 17.94, 19.81 -> 35.79, 10.91 -> 19.71, 31.95 -> 57.7",
+      "target": "75.26"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to convert 95 into Roman numerals? The examples: 51 -> LI (that's Roman 51). 33 -> XXXIII (Roman 33). 63 -> LXIII (Roman 63). 6 -> VI (Roman 6). So indeed it",
+      "target": "XCV"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXIX",
+      "target": "LXIX"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "I",
+      "target": "I"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=1.88 -> 9.09; t=3.57 -> 32.76; t=3.9 -> 39.1. Let's compute ratio: 9.0",
+      "target": "11.01"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.68, we can compute using scaling from known t values. Let's compute using known: maybe use t=4.21 gives 134.01. Ratio (",
+      "target": "165.6"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "IX",
+      "target": "IX"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 36.37 -> 51.74, 7.37 -> 10.48, 20.04 -> 28.51, 41.0 -> 58.3",
+      "target": "7.17"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XIV"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LI",
+      "target": "LI"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "85",
+      "target": "LXXXV"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 11.18 -> 18.54, 45.65 -> 75.70, 15.2 -> 25.20, 14.35 -> 23.",
+      "target": "36.93"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems like each word is translated from English to some language? Let's see: \"nwagmtw nwagomn whm btuomtw kszmnw\" -> \"student studies the ancient forest\". So each English word maps to a coded",
+      "target": "cat dreams potion"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXXIII",
+      "target": "LXXIII"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems to be simple substitution? Let's see: \"ngxnbu\" -> \"turtle\". So letters map: n->t, g->u, x->r, b->l, u->e? Wait \"ngxnbu\" length",
+      "target": "the dark mouse creates"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Take input bits: b7 b6 b5 b4 b",
+      "target": "00101101"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "`:*:` = !\"]? Actually they wrote `:*:` =",
+      "target": "(\"/\""
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.51, we can compute using scaling from known values. Let's compute directly: d = 0.5*g*t^2. We don't know g, but we can",
+      "target": "28.83"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "06+39 = 3906",
+      "target": "9402"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3.",
+      "target": "^"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXV",
+      "target": "XXV"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, \"wqj\" maps to \"the\". So \"wqj\" is \"the\". \"sajoju\" maps to \"clever\". \"zeig\" -> \"king\". \"fyxik\" -> \"found\". So mapping is simple substitution? Let",
+      "target": "the colorful teacher reads"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 21.26 -> 29.80, 20.53 -> 28.78, 35.98 -> 50.44, 34.98 -> 49",
+      "target": "59.54"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2) 10100111 -> 10",
+      "target": "11001111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems straightforward: each word maps to English phrase. Words like \"kon\" = \"the\". \"tpin\" maybe \"king\"? Let's see: \"tpin\" appears in \"kon tpin urxxpk vunrkni\". Could be \"king reads",
+      "target": "the wise rabbit creates"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.5, we can compute using scaling from known values. Let's compute using known: maybe we can compute directly: d = 0.5*g*t^2. Since we don",
+      "target": "49.83"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.28, we can compute using scaling from known values. Let's compute using one reference: t=2.86 gives 43.66. Ratio (3.2",
+      "target": "57.42"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 31.78 -> 54.71, 11.92 -> 20.52, 6.54 -> 11.26, 19.71 -> 33.9",
+      "target": "8.71"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XVII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to convert 94 to Roman numerals. 94 = XCIV? Wait Roman: 90 = XC, 4 = IV, so 94 = XCIV. But examples: they used uppercase letters: LII, LXXVI, etc. So answer should be",
+      "target": "XCIV"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3. \"|`->( = -/?",
+      "target": "??"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary -> output also 8-bit? Let's check lengths: 10011100 -> output 01111010 (8 bits). 01100110 ->",
+      "target": "00011110"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule from examples. Input \"72-79 = 8162\". So they write \"72-79\" and output \"8162\". That's not subtraction; it's concatenation of something? 72 and 79 produce 81",
+      "target": "1321"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=1.57, we can compute using proportion relative to known t. Let's compute directly: d = 0.5*g*t^2. We don't know g, but we",
+      "target": "6.64"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule. Examples: 37/18 = 665. That's not division; maybe concatenation? 37 and 18 -> 3718? But result is 665. Could be something like (3+7)*(1+8",
+      "target": "-20"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "10011",
+      "target": "01011000"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.12 -> 120.81; t=2.72 -> 52.66; t=3.13 -> 69.73. Let's verify scaling:",
+      "target": "156.55"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 6.63 -> 4.74, 49.97 -> 35.76, 15.99 -> 11.44, 5.36 -> 3.84,",
+      "target": "16.21"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Look at examples: 46.27 -> 40.45, 11.65 -> 10.18, 13.08 -> 11.43, 32.73 -> 28",
+      "target": "33.78"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCVIII",
+      "target": "XCVIII"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. Observations: distance seems roughly proportional to t^2. Let's compute ratio: For t=4.7, d=117.02. For t=4.01, d=85.18. Ratio d/t^2? Compute t^",
+      "target": "131.38"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "?",
+      "target": "LXXXIV"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 36.96 -> 60.66, 35.34 -> 58.00, 45.22 -> 74.21, 29.03 -> 47.",
+      "target": "51.25"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 19.39 -> 10.87, 20.78 -> 11.65, 10.1 -> 5.66. So conversion factor roughly 0.561? Let's",
+      "target": "10.97"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1",
+      "target": "$("
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit binary? Actually outputs shown are 8-bit strings of 0s and 1s, but they seem to be like 00000000, 00000",
+      "target": "00000000"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "\"\"&:[ = #]#<   (input: \"\"&:[",
+      "target": "`:"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.61, d=64.42. For t=2.79, we can compute d = 64.42 * (2.79/2",
+      "target": "73.61"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems to be proportional to t^2. Let's compute ratio: For t=3.8, d=116.26. For t=3.63, we can compute d = 0.5*g*t^2. Since we don't",
+      "target": "106.09"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.06 -> 80.54. Let's compute ratio: 80.54 / (4.06^2) = 80.54 / 16.48",
+      "target": "114.94"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "hjcvyv -> chases",
+      "target": "the clever teacher dreams"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3. \\>*]%",
+      "target": "-]"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rules from examples. Input strings like \"/:-%( = -\"^ . That seems like they take the characters and map? Let's parse: The left side is some pattern, the right side is result. For \"/:-%( = -\"^ . So pattern \"/:-%(",
+      "target": ")"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. The examples show mapping words: brqve = mouse, yrddrzv = follows, peoc = near, fovade = castle; vaqjepa = student, ehndrcev = explores, aie = the, opfsepa = ancient, bon",
+      "target": "queen studies the strange door"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems to be substitution cipher? Let's map letters: In first example \"beydu mcsvp yv ibeeur\" -> \"alice found in valley\". So b->a, e->l, y->i, d->c, u->e",
+      "target": "mouse sees near school"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems to be substitution cipher? Let's map letters: wzjor -> alice, uxjmrn -> writes, mgr -> the, cwxd -> dark, nroxrm -> secret. So each word maps to English phrase. Let's build mapping:",
+      "target": "mouse imagines the wise story"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example 1: 11010111 -> 01110",
+      "target": "10100000"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCVI",
+      "target": "XCVI"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. From examples, mapping seems to be substitution cipher? Let's see: \"nzfasze\" -> \"teacher\". So n->t, z->e, f->a, a->c, s->h, e->e? Wait teacher is 7 letters, but",
+      "target": "queen watches under ocean"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "...",
+      "target": "XLII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "VIII",
+      "target": "VIII"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find distance for t=3.63s. Use pattern: distance seems roughly proportional to t^2. Let's compute using given examples: For t=3.62, distance=106.15. For t=3.79, distance=116.",
+      "target": "106.74"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXVIII",
+      "target": "XXXVIII"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=4.79, we can compute using proportion relative to known t. Let's compute using one reference: t=3.86 gives 113.25. Ratio (4",
+      "target": "174.4"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example 1: 00011010 -> 10100011. Input bits: 0",
+      "target": "00111110"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "mqpgs",
+      "target": "mouse discovers puzzle"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems to be simple substitution? Let's see: \"nps inqrjzs umois wqsrnsi\" -> \"the strange mouse creates\". So each word maps: nps->the, inqrjzs->strange, umois->mouse,",
+      "target": "princess writes treasure"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "0: 00000001 -> 111",
+      "target": "00101111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"dbfyia qievtv ait meld uood\" -> \"knight chases the dark book\". So mapping: dbfyia->knight, qievtv->chases, ait->the, meld->dark, uood->book. So",
+      "target": "the magical king follows"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's see: 00000011 -> 11100000 (that's 8 bits: 111",
+      "target": "00110011"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XL",
+      "target": "XL"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 29.46 -> 48.37, 40.63 -> 66.71, 41.71 -> 68.48, 39.62 -> 65.",
+      "target": "40.45"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? They show output like 00000000, 11101010, 01100000, etc. Output seems to be",
+      "target": "01101000"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXIII",
+      "target": "XXXIII"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=4.9, d=193.97. For t=4.85, slightly less. Ratio (4.85/4.9)^2 = (0.",
+      "target": "190.03"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "knypd",
+      "target": "queen found puzzle"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's see: 10111000 -> 00000001 (8 bits). Yes output is 8",
+      "target": "10000100"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXXXIII",
+      "target": "LXXXIII"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 34.38 -> 36.98, 42.97 -> 46.21, 42.45 -> 45.66. So they are converting meters to some other unit,",
+      "target": "12.55"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Now",
+      "target": "1807"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.29 -> 174.22; t=3.1 -> 90.97; t=1.58 -> 23.63. Let's verify scaling: ratio",
+      "target": "147.7"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LI",
+      "target": "LI"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "...",
+      "target": "LXXXIX"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, \"nmx\" maps to \"the\". \"gzdzewfd\" -> \"colorful\". \"gbn\" -> \"cat\". \"subjsoxh\" -> \"imagines\". \"tesnxh\" -> \"writes\". \"cznszo",
+      "target": "the wise teacher writes"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's count: Example 10100100 -> 11010010 (8 bits). Yes output length 8.",
+      "target": "01110001"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "4. [/+|/ = {[",
+      "target": "[]|"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=1.61 -> 23.25; t=2.6 -> 60.63; t=1.93 -> 33.41. Let's verify scaling: ratio of",
+      "target": "221.54"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "ponco",
+      "target": "wizard sees inside tower"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCIX",
+      "target": "XCIX"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 49.87 -> 75.80, 34.53 -> 52.48, 28.62 -> 43.50, 37.5 -> 57.0",
+      "target": "64.35"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems: dtylps=wizard, spldv=draws, ohm=the, jiqipwcq=colorful, vmjpmo=secret. uicvm=mouse, wiqqidv=follows, zpt",
+      "target": "turtle draws the clever mirror"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=1.48, d=10.23. For t=1.38, we can compute d = 10.23 * (1.38/1",
+      "target": "8.89"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXV",
+      "target": "XXV"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=3.51 ->112.28; t=2.59->61.14; t=4.25->164.62. Let's verify ratio: 1",
+      "target": "210.86"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXIX",
+      "target": "XXIX"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2) 01000101 -> 1",
+      "target": "10110111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems like each word corresponds to a phrase: \"the wise key\", \"queen follows key\", \"mouse explores the magical treasure\". So each word is a single word mapping to a phrase? Actually each example shows three words: first word maps to \"knight\",",
+      "target": "the strange alice follows"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 40.99 -> 37.20, 46.09 -> 41.83, 5.37 -> 4.87, 34.81 -> 31.59",
+      "target": "12.39"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.56, d=90.28. For t=4.52, we can compute d = 90.28 * (4.52/4",
+      "target": "88.71"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XVII"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule mapping input string to output string. Input strings seem to be composed of characters: % { }",
+      "target": "<%"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=1.0 => 6.61. t=4.18 =>115.45. t=4.02 =>106.78. So scaling: distance = k * t",
+      "target": "47.81"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 45.49 -> 36.92, 5.45 -> 4.42, 34.71 -> 28.17. Likely conversion factor is about 0.812?",
+      "target": "21.77"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Let's",
+      "target": "10100010"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.26 -> 68.91; t=2.15 -> 17.55; t=3.17 -> 38.16. Let's verify scaling:",
+      "target": "47.05"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary -> output also 8-bit? Actually outputs shown are 8 bits? Let's count: 10011101 -> 00111010 (8 bits). Yes output is 8",
+      "target": "00000001"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "m kjhi -> story (actually \"",
+      "target": "mouse studies key"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 13.58 -> 26.41, 43.78 -> 85.15, 32.71 -> 63.62. Looks like output is roughly double the input? Let",
+      "target": "52.53"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to apply to \"?> '>>\"? Actually input is \"?> '>>\"? Wait the input is \"?> '>>\"? The given is \"",
+      "target": ":<]"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3) 11000",
+      "target": "10111011"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXII",
+      "target": "LXII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXIX",
+      "target": "LXIX"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "LI"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"remdp baqympb afp dqvmgqb yggv\" -> \"alice studies the curious door\". So mapping: remdp -> alice, baqympb -> studies, afp -> the, dqvmgqb",
+      "target": "princess chases the curious garden"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.8 -> 179.37; t=2.74 -> 58.45; t=4.66 -> 169.06. So scaling: distance =",
+      "target": "68.21"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Look at examples: 46.39 -> 54.32, 21.04 -> 24.63, 30.93 -> 36.21, 34.13 -> 39",
+      "target": "27.62"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems: aozuiq = knight, yrgpw = reads, qyrgwvyr = treasure, qir = the, tvyzjvw = curious, kzyp = bird, pzwtjnryw = discovers, wrrw",
+      "target": "turtle writes the dark mirror"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rules from examples. Input strings like \"]>||\" becomes \"\\\". Actually example: \"]>|| = \\). Wait they wrote \"]>|| = \\) maybe meaning output is backslash? Let's parse: \"]>|| = \\) . So pattern \"]>||\" maps to \"\\",
+      "target": "\")"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "##*:$",
+      "target": ":&]!"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. The examples show mapping: fqmb->king, hiyud->reads, livcmu->beyond, qdrymu->island. So each word maps to English phrase. The rule likely is simple substitution cipher? Let's see letters: f->k,",
+      "target": "bird chases story"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "4. \"|",
+      "target": "$|\\:"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, \"tlh\" maps to \"the\". So \"tlh\" is article \"the\". \"olbjhj\" appears twice, maps to \"chases\". So \"olbjhj\" = \"chases\". \"tqdteh\" = \"t",
+      "target": "student chases through forest"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=1.89 -> 14.35; t=1.1 -> 4.86; t=3.18 -> 40.62. Let's verify scaling: ratio of distances",
+      "target": "95.66"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to",
+      "target": "127"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LV",
+      "target": "LV"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 27.38 -> 25.92, 16.52 -> 15.64, 29.89 -> 28.29, 6.02 -> 5.7",
+      "target": "26.69"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule for division \"/\" maybe something like difference?",
+      "target": "17/"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LV",
+      "target": "LV"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? Let's check lengths: Input 00111000 -> output 11111100 (8 bits). Input 11000001",
+      "target": "00111111"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Look at examples: 35.17 -> 25.93, 36.66 -> 27.03, 5.08 -> 3.75, 34.16 -> 25.1",
+      "target": "11.74"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary -> output also 8-bit? Actually outputs shown are 8 bits? Let's count: 01101110 -> output 10110111 (8 bits). Yes output length",
+      "target": "00100110"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXVII",
+      "target": "LXVII"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems like each word is encrypted via some substitution cipher? Let's examine: \"lettqr slqrvo ovxlvr -> rabbit writes secret\". So \"lettqr\" maps to \"rabbit\". That's 6 letters to 6 letters. Let's align letters:",
+      "target": "queen explores above forest"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1. ')''{ = #[? Actually given: ')''{ = #['? Wait they wrote ')''{ = #['? The example: ')''{ = #['? Let's read: ')''{ = #['? The text: ')",
+      "target": "[#>#"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 29.53 -> 26.58, 40.34 -> 36.31, 24.49 -> 22.04, 8.46 -> 7.6",
+      "target": "13.53"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XVIII"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems roughly proportional to t^2. Let's compute ratio: For t=3.06, d=54.71. For t=3.08, expect slightly higher. Let's compute using formula: d ∝ t^2. So d2",
+      "target": "55.43"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1.",
+      "target": "<)$<"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2",
+      "target": "student found in library"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, seems words map: pktxb -> mouse, bcozkwbx -> explores, pbxxhdb -> message. So each word is encrypted via some substitution cipher per letter? Let's see mapping: p->m, k->o, t->u, x->",
+      "target": "dragon creates the magical forest"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 45.95 -> 80.36, 44.32 -> 77.51, 29.14 -> 50.96, 47.75 -> 83.",
+      "target": "75.83"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "So mapping: a->d, d->r, i->a,",
+      "target": "knight creates under palace"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "3. 00010",
+      "target": "10010111"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Interpretation: Input string \"?$+`$\" transforms to output \">^{\". So characters: ? $ ` + $? Wait the input is \"?$+`$\". Let's",
+      "target": ">&{"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXXIX",
+      "target": "LXXIX"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=4.0 => 138.45; t=3.78 => 123.64; t=4.09 => 144.75. So scaling: distance",
+      "target": "60.77"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 14.84 -> 12.27, 30.49 -> 25.21, 40.09 -> 33.14, 26.74 -> 22.",
+      "target": "9.75"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems: each letter shifted? Let's see: v->t, k->h, e->i? Actually \"vkz\" maps to \"the\". So v->t, k->h, z->e. So mapping is not simple Caesar? Let",
+      "target": "mouse found castle"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems simple substitution? Let's see: \"uqnnpt\" -> \"rabbit\". So u->r, q->a, n->b, p->b? Wait \"rabbit\" letters: r a b b i t. The cipher \"uqnnpt\":",
+      "target": "the bright cat found"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's count: Example 10110001 -> 11011000 (8 bits). Input length 8, output",
+      "target": "01110000"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit. The transformation seems to be: output = (input << 1) & 0xFF? Let's test: 01110111 <<1 = 1110",
+      "target": "00000010"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "So c->c, p->a? Wait \"cps\" maps to \"cat\". So c stays",
+      "target": "alice imagines around library"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=4.05 => 66.25. For t=4.24, ratio (4.24/4.05)^2 = (1.046",
+      "target": "72.61"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 33.35 -> 22.39, 47.3 -> 31.75, 33.27 -> 22.33, 44.74 -> 30.",
+      "target": "17.31"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems simple substitution: each letter shifted? Let's see: dhb -> the, ufvmba -> golden, wvtjb -> alice, nbwmp -> reads. So dhb = the, ufvmba = golden, wvtj",
+      "target": "turtle creates the golden message"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. The examples show mapping: awxxo -> queen, jfiqzuxti -> discovers, sdr -> map. So each word corresponds to a meaningful English word. The rule likely is simple substitution? Let's see letters: awxxo maps to queen. So a->",
+      "target": "bird draws the wise story"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "00001101 -> 0",
+      "target": "10000000"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 7.22 -> 10.62, 28.89 -> 42.48, 44.83 -> 65.93, 31.17 -> 45.",
+      "target": "69.88"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 43.63 -> 86.81, 36.59 -> 72.81, 17.84 -> 35.50, 47.72 -> 94",
+      "target": "69.44"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to apply the same hidden rule. The examples show that input meters are converted to some other unit, likely \"wonderland units\". The conversion factor seems roughly 0.83? Let's compute: 30.3 -> 25.14, ratio = 0.83",
+      "target": "20.86"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XVII",
+      "target": "XVII"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output is 8-bit binary? Actually outputs shown are 8 bits? Example: 11100001 -> 01000000 (output is 8 bits). They seem to be",
+      "target": "01000000"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule from examples. Given operations: \"19-22 = 96\", \"81}78 = 7881\", \"44%92 = 6721\", \"38-04 = 34\". The symbols are -,",
+      "target": "6651"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XI",
+      "target": "XI"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find distance for t=2.6s using same rule. From examples, t=2.57 gives 47.85. Slight increase. Let's compute using formula: d proportional to t^2. So ratio (2.6/2.57)^2 *",
+      "target": "48.97"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=3.46 -> 50.25. t=1.67 -> 11.71. t=1.9 -> 15.15. Let's verify scaling: ratio of",
+      "target": "96.31"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's check: 01011100 -> 01110010 (8 bits). Yes output is 8 bits.",
+      "target": "00110100"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems roughly proportional to t^2. Let's compute ratio: For t=4.18, d=120.83. For t=4.08, d=115.12. For t=4.31, expect slightly",
+      "target": "128.46"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=2.6, d=53.41. For t=2.78, we can compute ratio (2.78/2.6)^2 *53.4",
+      "target": "61.06"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XC",
+      "target": "XC"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "?",
+      "target": "LXXXIII"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's count: \"11100111\" is 8 bits. \"11100001\" is 8",
+      "target": "10100110"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8-bit strings: e.g., 10001101 -> 10100000. That's 8 bits: output bits: first",
+      "target": "00000100"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems proportional to t^2. Let's compute ratio: For t=4.13, d=109.44. For t=4.19, expect slightly higher. Compute scaling factor (4.19/4.13)^2.",
+      "target": "112.64"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 44.42 -> 73.67, 38.77 -> 64.30, 39.9 -> 66.17, 33.36 -> 55.",
+      "target": "14.98"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXVI",
+      "target": "XXXVI"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rules from examples. Input strings like \"/+<\" = \"''%\". They seem to be concatenations? Let's parse: \"/+<\" is three characters: '/', '+', '<'. Output is \"''%\" which is three characters: two single quotes and a percent. So",
+      "target": "'\\%\""
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? Let's see: 01110110 -> 11100111. That's 8 bits: input bits: 0 1 1",
+      "target": "01001011"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 16.13 -> 12.90, 15.68 -> 12.54, 39.84 -> 31.87, 39.11 -> 31",
+      "target": "30.73"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. From examples, mapping seems to be substitution cipher? Let's see: \"xvaubqv\" -> \"student\". So letters map: x->s, v->t, a->u, u->d, b->e, q->n, v->t (",
+      "target": "dragon reads under library"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "si",
+      "target": "teacher chases the curious story"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's count: example 00011000 -> 10011111 (8 bits). Yes output is",
+      "target": "01011111"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1. %*{` = /]",
+      "target": "||`"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. From examples, words map: dpmmku -> rabbit, kgpjkvnq -> imagines, gpc -> map, zdpjlv -> dragon, zdpaq -> draws, epquyn -> castle, usn -> the, quwzknq -> studies",
+      "target": "princess chases around palace"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 37.63 -> 39.64, 13.77 -> 14.51, 6.1 -> 6.43, 27.56 -> 29.03",
+      "target": "22.45"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 43.21 -> 57.94, 21.54 -> 28.88, 16.81 -> 22.54, 27.23 -> 36",
+      "target": "22.27"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to decode using rule: each word maps to English. From examples: \"bylpgo\" -> \"knight\", \"foxcljf\" -> \"studies\", \"ekkb\" -> \"door\"? Let's see pattern: \"ekkb\" maybe \"door\"? Let's check mapping:",
+      "target": "knight studies the wise book"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=1.14, d=6.32. For t=1.67, we can compute d = 6.32 * (1.67/1.1",
+      "target": "13.55"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find distance for t=3.19s. Use rule: distance proportional to t^2. Given examples: t=3.2 -> 62.43. So for 3.19, slightly less. Compute ratio (3.19/3.2)^2",
+      "target": "62.04"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example",
+      "target": "student draws secret"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=4.0, we can compute using proportion relative to known t values. Let's compute using known: For t=3.83, distance=37.51. Ratio (4",
+      "target": "40.91"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.56, we can compute using interpolation or formula. Let's compute using given data: maybe they use g constant such that d = 0.5*g*t^2. We",
+      "target": "59.14"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's see: 01110111 -> 11011100 (8 bits). 10000",
+      "target": "00010000"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Let's list",
+      "target": "11110111"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples, we can compute scaling. For t=1.57, we can compute using proportion relative to known t. Let's compute using one reference: t=2.44 gives 17.71. Ratio (1.",
+      "target": "7.33"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2) 01101100 ->",
+      "target": "00010000"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=1.32 => 9.87; t=1.07 => 6.48; t=1.48 => 12.4. Let's check ratio: 9.8",
+      "target": "140.44"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "gn",
+      "target": "wizard creates through wonderland"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "eyu -> the",
+      "target": "dragon studies inside garden"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.21, we can compute using scaling from known values. Let's compute using one reference, say t=4.37 gives 119.95. Ratio (4",
+      "target": "111.33"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 12.96 -> 22.86, 33.7 -> 59.45, 49.91 -> 88.04, 41.69 -> 73.5",
+      "target": "81.25"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1: 10110100 -> 10",
+      "target": "01001111"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=2.2 -> 18.9; t=2.22 -> 19.24. So roughly d = k * t^2. Compute k = d / t^2. For t=",
+      "target": "68.54"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 7.86 -> 9.70, 9.9 -> 12.21, 38.03 -> 46.91, 27.64 -> 34.10,",
+      "target": "55.15"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=1.73, we can compute using scaling from known t values. Let's compute using one reference, say t=2.05 gives 20.19. Ratio (1",
+      "target": "14.38"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We have 8-bit input, output also 8-bit? Let's check lengths: Example 11110111 -> 10111111 (8 bits). 10110011 ->",
+      "target": "00000010"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXIV",
+      "target": "XXIV"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Let's check: 00110000 -> 10000001 (8 bits). Input bits: maybe they take some bits and rearrange? Let's",
+      "target": "11110000"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXIX",
+      "target": "XXIX"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 36.73 -> 31.01, 31.83 -> 26.87, 35.72 -> 30.15. So conversion factor roughly 0.843",
+      "target": "35.16"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 40.78 -> 39.51, 38.78 -> 37.57, 24.9 -> 24.13, 9.55 -> 9.25,",
+      "target": "44.84"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=3.65 -> 86.73; t=3.35 -> 73.06. Let's compute ratio: 86.73 / 73.06 ≈",
+      "target": "82.04"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "59",
+      "target": "LIX"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXII",
+      "target": "XXXII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXXII",
+      "target": "LXXII"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "silver = smg",
+      "target": "bird draws the secret puzzle"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "\"msvydk\" = \"",
+      "target": "the curious mouse creates"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XLIV",
+      "target": "XLIV"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's check: 00000001 -> 00100000 (that's 8 bits? 00",
+      "target": "00011100"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.1, distance? Let's compute using interpolation between 4.08 (138.88) and 4.16 (144.38). The",
+      "target": "140.25"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Let's check: 00101001 -> 01001010 (8 bits). It seems they rotate left by 3? Let's test: original",
+      "target": "00111110"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.89 -> 144.32; t=1.5 ->13.58; t=1.29->10.04; t=3.02->5",
+      "target": "96.57"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1)",
+      "target": "|\""
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LII",
+      "target": "LII"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems: kdytx -> alice, ygkayuxq -> imagines, ixe -> key. iuyazv -> knight, ljddjmq -> follows, ljbxqv -> forest. obyutxqq -> princess,",
+      "target": "the dark alice reads"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=2.16 -> 28.37; t=2.69 -> 44.0; t=4.67 -> 132.62. Let's compute ratio:",
+      "target": "48.7"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2. (!+!> = )@",
+      "target": "-!|"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "osccul ->",
+      "target": "hatter dreams the clever message"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Original: /]@}% -> output: /]}% . So",
+      "target": "\"!!"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2. $# - ' @ = -(]   ($",
+      "target": ":#$#"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.49, we can compute using scaling from known values. Let's compute using one reference: t=2.76 gives 50.41. Ratio (3.4",
+      "target": "80.59"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "- 54^25 = 4",
+      "target": "4572"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 35.06 -> 36.93, 45.15 -> 47.56, 44.34 -> 46.71, 20.98 -> 22",
+      "target": "43.00"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output is either 00000000 or 10000000 or 10000000 etc. It seems output is either 0 or 1 followed by seven",
+      "target": "10000000"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 5.56 -> 10.89, 23.45 -> 45.92, 21.78 -> 42.65, 10.72 -> 20.9",
+      "target": "18.47"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 28.5 -> 51.99, 9.57 -> 17.46, 41.06 -> 74.91, 40.96 -> 74.7",
+      "target": "17.75"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example: 11110111 -> output 01110000. Input bits: maybe they take bits 4-",
+      "target": "10100000"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXX",
+      "target": "XXX"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example 1: 11110101 -> output 0",
+      "target": "11000011"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 34.89 -> 23.44, 49.75 -> 33.43, 7.54 -> 5.07, 25.25 -> 16.96",
+      "target": "17.37"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's see: 10111101 -> 11110100 (8 bits). Input bits: b7 b6",
+      "target": "10110100"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXII",
+      "target": "XXXII"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output is 8-bit? Actually outputs shown are 8-bit strings of zeros and maybe some ones. For example 11101101 -> 00000011 (that's 8",
+      "target": "00000001"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example1: input \"||*&/\" -> output \"|][&\". Input characters: '|','|','*','",
+      "target": "]]&|"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example 1: 00010100 -> 1000010",
+      "target": "00101110"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 8.6 -> 7.92, 16.44 -> 15.14, 24.68 -> 22.73, 6.83 -> 6.29. Looks like",
+      "target": "24.33"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. So compute d for t=3.74. Use examples: t=4.52 -> 78.67. Let's compute ratio: (3.74/4.52)^2 = (0.82",
+      "target": "53.86"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 30.65 -> 41.79, 27.42 -> 37.38, 16.06 -> 21.90. Looks like multiply by some factor approx 1.",
+      "target": "60.26"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Now we",
+      "target": "]:(]"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output answer inside \\boxed{}",
+      "target": "146.29"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's see: 11010101 -> 10101000 (8 bits). Yes output is 8 bits",
+      "target": "00000100"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 22.84 -> 28.29, 47.2 -> 58.46, 24.08 -> 29.83. Likely they multiply by some factor approx 1.",
+      "target": "39.82"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule for )^-$) (i.e., ) minus )? Actually expression: )^-$) maybe means ) - )",
+      "target": "?)"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example1: rqirkh -> turtle. So r->t, q->u, i->r, r->t, k->l, h->e. So mapping: r=t, q",
+      "target": "the mysterious hatter draws"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's check: 11001000 -> 01000110 (that's 8 bits? 01",
+      "target": "00100001"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 46.7 -> 91.64, 44.81 -> 87.94, 24.93 -> 48.92. Looks like output is roughly double the input? Let's check",
+      "target": "19.41"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input:",
+      "target": "11111011"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=2.07 -> 24.88. For t=2.24, compute ratio (2.24/2.07)^2 * 24.8",
+      "target": "29.13"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2) 11111111 -> 11",
+      "target": "01111011"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "oukzdp ->",
+      "target": "alice writes inside castle"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "00001111",
+      "target": "01110111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. The examples show mapping: ncdywcb -> teacher, updhukci -> imagines, kcdb -> near, tdrdyc -> palace. So each word maps to English word. The rule likely is substitution cipher per letter? Let's see mapping letters: n->",
+      "target": "bird imagines beyond ocean"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCVIII",
+      "target": "XCVIII"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.31, d=122.81. For t=4.36, we can compute d = 122.81 * (4.36",
+      "target": "125.68"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to apply hidden rule. Let's parse examples.",
+      "target": "(^"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8 bits? Let's check: 11111101 -> 10011111 (8 bits). 000100",
+      "target": "11100101"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXI",
+      "target": "XXXI"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=2.29, we can compute using proportion relative to known t values. Let's compute directly: d = 0.5*g*t^2. We don't know g, but",
+      "target": "23.84"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs are 8-bit strings? Let's check: 01000110 -> 10000100 (8 bits). Yes output length 8.",
+      "target": "01001111"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"nup\" maps to \"the\". \"zcbmun\" maps to \"bright\". \"nicnep\" maps to \"turtle\". \"scbnph\" maps to \"writes\". \"xcomqk\" maps to \"dragon\". \"g",
+      "target": "the silver hatter sees"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 28.73 -> 39.13, 31.37 -> 42.72, 13.78 -> 18.77, 26.27 -> 35",
+      "target": "22.68"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rules from examples. Given strings like \"89`47 = 2527\". The backtick maybe indicates concatenation? Actually \"89`47\" yields \"2527\". Let's see: 89 and 47 maybe combined as 8",
+      "target": "681"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.85, we can compute using proportion: distance = k * t^2. Find k from one example: using t=2.46, distance=50.29",
+      "target": "67.5"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's count: 11101100 -> 10110011 (8 bits). Yes output is 8 bits",
+      "target": "00011010"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 24.97 -> 15.67, 27.85 -> 17.48, 44.55 -> 27.96. So conversion factor seems roughly multiply by 0.6",
+      "target": "26.63"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "35 and 81 ->",
+      "target": "9111"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 15.66 -> 19.73, 48.6 -> 61.22, 26.67 -> 33.59, 41.6 -> 52.4",
+      "target": "47.31"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXII",
+      "target": "XXXII"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule from examples. Input format: maybe two numbers separated by }? Actually examples: \"45^08 = 0234\", \"37}95 = 131\", \"99^88 = 2178\". So '^'",
+      "target": "93"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 39.66 -> 62.43, 47.6 -> 74.93, 33.93 -> 53.41. Likely conversion factor is about 1.574",
+      "target": "56.87"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 31.1 -> 21.13, 11.46 -> 7.79, 9.71 -> 6.60. Likely conversion factor approx 0.68? Let's compute:",
+      "target": "9.64"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 39.37 -> 71.73, 32.6 -> 59.40, 22.56 -> 41.11. Looks like multiply by about 1.822?",
+      "target": "34.58"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XC",
+      "target": "XC"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Now determine result for:",
+      "target": "}>[["
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=2.49 -> 55.9; t=2.07 -> 38.63; t=3.19 -> 91.74. Let's verify scaling: ratio of",
+      "target": "184.19"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Let's check lengths: Input 11111110 -> output 11111101 (8 bits). Input 11001101 ->",
+      "target": "11101000"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "\"}*]'\"?",
+      "target": "-}@"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Given pattern: @:\\:' maybe transforms similarly? Let",
+      "target": "@::'"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=2.85 -> 40.73; t=4.3 -> 92.72; t=1.53 -> 11.74. Let's verify scaling: ratio of",
+      "target": "119.42"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find hidden rule. Look at examples: 12.19 -> 21.18, 38.13 -> 66.26, 40.75 -> 70.82, 41.86 -> 72.",
+      "target": "46.05"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 11.85 -> 19.94, 9.81 -> 16.51, 13.08 -> 22.01. Looks like output is roughly 1.68 times input",
+      "target": "54.75"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We",
+      "target": "01101110"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: Input 8-bit binary, output also 8-bit? Let's check lengths: Example 10111101 -> 10101011 (8 bits). 01001111 -> 1",
+      "target": "10101100"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Example 1: 0",
+      "target": "10000001"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find transformation pattern.",
+      "target": "10011110"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.53, we can compute using scaling from known values. Let's compute using one reference: t=2.05 gives 13.48. Ratio (2.5",
+      "target": "20.53"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.79, d=191.93. For t=4.88, we can compute d = 191.93 * (4.88",
+      "target": "199.21"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXVI",
+      "target": "LXVI"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XLIX",
+      "target": "XLIX"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems to be simple substitution cipher? Let's see: \"the wise student discovers\" corresponds to \"rys ibcs crtvsnr vbcxhgsoc\". So each word maps: \"the\" -> \"rys\", \"wise\" -> \"ibcs\",",
+      "target": "the clever rabbit draws"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=1.33 -> 5.6; t=4.17 -> 55.06; t=2.38 -> 17.94. Let's verify scaling: 1.",
+      "target": "64.98"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.92, we can compute using scaling from known values. Let's pick a reference, maybe t=3.38 gives 31.75. Ratio (2.9",
+      "target": "23.69"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. Observations: t and distance. Looks like quadratic relationship. Let's compute ratio: For t=3.53, d=36.84. For t=3.68, d=40.04. For t=3.87, d",
+      "target": "31.23"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 21.39 -> 11.30, 9.69 -> 5.12, 5.41 -> 2.86, 34.19 -> 18.06. It",
+      "target": "23.02"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. Observations: distance seems roughly proportional to t^2. Let's compute ratio: For t=2.96, d=76.08. For t=2.97, expect slightly higher. Let's compute using formula: d ∝ t^2.",
+      "target": "76.59"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "So ynd = the, myujtld = strange, aj",
+      "target": "king writes mirror"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Probably",
+      "target": "`#\"&"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems like substitution cipher? Let's see: qyw -> cat, dwusbmd -> studies, lrjmdw -> forest. So letters shift? Let's map each letter to English. Let's write alphabet positions. Maybe it's a Caesar shift? Let's",
+      "target": "the silver king discovers"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. Given examples: \"tym sabnmat tgwtcm etgxnme\" -> \"the ancient turtle studies\". So mapping: tym->the, sabnmat->ancient, tgwtcm->turtle, etgxnme->studies. So",
+      "target": "bird found the bright garden"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=1.69, d=20.15. For t=1.49, we can compute d = 20.15 * (1.49/1",
+      "target": "15.66"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rule from examples. Input strings like \"?`*}]\" output \"`]][\". Let's map characters: maybe they are rearranged? Let's list characters: \"? ` * } ]\". Output \"` ] ] [\". Wait output is \"`]][\". That's characters: `, ],",
+      "target": "-}}"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "1",
+      "target": "$?"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.71, we can compute using scaling from known values. Let's compute directly: d = 0.5*g*t^2. We don't know g, but we can",
+      "target": "49.13"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 12.96 -> 9.97, 49.78 -> 38.31, 45.45 -> 34.98. So conversion factor approx 0.77? Let",
+      "target": "34.85"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XCVII",
+      "target": "XCVII"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LXIX",
+      "target": "LXIX"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit? Actually outputs shown are 8 bits? Let's check: 00110010 -> 10010000 (that's 8 bits). Input bits:",
+      "target": "00010010"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "{[-!| = -:",
+      "target": ":&&"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XLV"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=4.96 -> 105.98; t=3.42 -> 50.39; t=1.68 -> 12.16. Let's compute ratio:",
+      "target": "95.56"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 13.69 -> 21.15, 38.71 -> 59.79, 6.61 -> 10.21, 30.41 -> 46.",
+      "target": "20.02"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 45.34 -> 77.00, 5.7 -> 9.68, 5.0 -> 8.49, 8.48 -> 14.40, 28",
+      "target": "81.05"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2. itaivc qamej wo",
+      "target": "wizard studies in wonderland"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXII",
+      "target": "XXII"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 21.53 -> 23.37, 16.56 -> 17.98, 21.57 -> 23.41, 12.17 -> 13",
+      "target": "23.04"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples: \"ban\" = \"the\". \"klrcnv\" = \"knight\". \"svokab\" = \"golden\". \"zlyvc\" = \"found\". So mapping: each word maps to English word. \"pynnv\" = \"que",
+      "target": "queen sees the hidden book"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 40.69 -> 66.95, 22.8 -> 37.52, 37.97 -> 62.48, 20.28 -> 33.3",
+      "target": "44.08"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, pattern: word1 maps to animal? \"oujjqk\" -> rabbit, \"glwwf\" -> queen, \"voqfhwpp\" -> princess, \"aouief\" -> dragon, \"xelpw\" -> mouse. So first word is",
+      "target": "rabbit explores above island"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2) 0100110",
+      "target": "01001111"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Given examples: 38.18 -> 27.46, 8.39 -> 6.03, 27.81 -> 20.00. Likely conversion factor is something like divide by 1.3",
+      "target": "32.17"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Look at examples: input 8-bit binary, output is also 8-bit, seems to be left rotate? Let's test: 11000100 -> output 01100010. That's like moving the first bit to the",
+      "target": "00010001"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XXXV",
+      "target": "XXXV"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "vo",
+      "target": "rabbit reads crystal"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "Input: //$< (four characters: /,",
+      "target": "'"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 25.73 -> 50.49, 24.97 -> 49.00, 35.13 -> 68.93. Looks like output is roughly double the input?",
+      "target": "17.92"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples: t=3.45 -> 88.28; t=4.95 -> 181.73; t=1.96 -> 28.49. Let's compute ratio:",
+      "target": "32.71"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2",
+      "target": "00011001"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 13.79 -> 22.01, 46.62 -> 74.43, 18.78 -> 29.98, 20.35 -> 32",
+      "target": "15.72"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=2.77, d=34.48. For t=2.29, we can compute d = 34.48 * (2.29/2",
+      "target": "23.56"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 28.61 -> 14.59, 38.23 -> 19.50, 17.47 -> 8.91, 10.04 -> 5.12",
+      "target": "2.63"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 37.92 -> 58.42, 37.31 -> 57.48, 14.38 -> 22.15, 39.26 -> 60",
+      "target": "34.52"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems to be substitution cipher? Let's see: \"vucyi nuzzuty vbddud\" -> \"mouse follows mirror\". So each word maps: vucyi -> mouse, nuzzuty -> follows, vbddud -> mirror. So it's a",
+      "target": "knight follows puzzle"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule. From examples, mapping seems consistent: zpf = the, ajxvpz = writes? Wait earlier: \"sxtv gjxzfe zpf gxef klzxlt -> king writes the wise potion\". So sxtv = king, gjxzfe",
+      "target": "the bright hatter draws"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=1.4, we can compute using scaling from known values. For t=1.7, distance=8.63. Ratio (1.4/1.7)^2 = (",
+      "target": "5.85"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "XII",
+      "target": "XII"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer transformation rules. Given examples: 44-87 = 43. That's subtraction but result is 43, which is 44-1? Actually 44-87 = -43 normally, but they output 43 (positive). So maybe they",
+      "target": "6102"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 29.25 -> 49.25, 12.21 -> 20.56, 21.83 -> 36.76, 18.58 -> 31",
+      "target": "32.03"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Input-output examples: 6.91 -> 7.45, 42.37 -> 45.67, 22.62 -> 24.38, 42.83 -> 46.1",
+      "target": "27.33"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to apply the same conversion factor as previous examples. Let's compute ratio: 34.74 -> 54.55, 34.86 -> ?. The factor is 54.55 / 34.74 = approx 1.571",
+      "target": "54.74"
+    },
+    {
+      "puzzle_type": "Text Encryption",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "utjjt",
+      "target": "wizard draws the hidden book"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": true,
+      "has_boxed": true,
+      "extracted": "LX",
+      "target": "LX"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute scaling. For t=3.13, we can compute using proportion relative to known t. Let's compute using one known point, say t=1.84 gives 27.42. Ratio (",
+      "target": "79.35"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the rule. Given examples: input 8-bit binary, output seems to be left rotation by 1? Let's test: 00111000 -> rotate left yields 01110000, matches. 10001110",
+      "target": "01010011"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems proportional to t^2. Let's compute ratio: For t=2.18, d=30.98. For t=3.19, expected d = 0.5*g*t^2. Since we don't know g, but",
+      "target": "66.34"
+    },
+    {
+      "puzzle_type": "Equation Transformation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to",
+      "target": "-@?"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems proportional to t^2. Let's compute ratio: For t=3.09, d=55.11. For t=3.91, expected d = 55.11 * (3.91/3.09)^",
+      "target": "88.25"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer rule: distance proportional to t^2. Given examples: t=3.69 -> 77.44; t=3.54 -> 71.27; t=1.58 -> 14.2. Let's compute ratio: 7",
+      "target": "137.11"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to infer the rule. Look at examples: Input 8-bit binary, output also 8-bit. It seems output is input with some bits changed: maybe rotate right by 3? Let's test: 01100001 -> 00100001.",
+      "target": "10100001"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=4.46, d=127.75. For t=4.49, we can compute d = 0.5*g*t^2. Since we don",
+      "target": "129.48"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=3.4, compute d = 0.5*g*t^2. We can use scaling from known points. For t=3.11, d=49.61",
+      "target": "59.3"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance seems to be proportional to t^2. Let's compute ratio: For t=3.81, d=36.79. For t=4.07, we can compute d = 0.5*g*t^2. Since we don't",
+      "target": "41.98"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. Look at examples: 15.18 -> 23.77, 5.58 -> 8.74, 10.59 -> 16.58, 40.51 -> 63.4",
+      "target": "48.73"
+    },
+    {
+      "puzzle_type": "Number Base Conversion",
+      "exact_match": false,
+      "has_boxed": true,
+      "extracted": "We need to output \\boxed{}",
+      "target": "XV"
+    },
+    {
+      "puzzle_type": "Unit Conversion",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find the hidden rule. The examples: 23.65 -> 43.75, 22.66 -> 41.92, 10.72 -> 19.83, 25.63 -> 47.",
+      "target": "56.64"
+    },
+    {
+      "puzzle_type": "Bit Manipulation",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "2. 11000110",
+      "target": "11111000"
+    },
+    {
+      "puzzle_type": "Gravitational Constant",
+      "exact_match": false,
+      "has_boxed": false,
+      "extracted": "We need to find rule: distance proportional to t^2. Given examples, we can compute ratio. For t=1.36, d=14.62. For t=1.44, we can compute d = 14.62 * (1.44/1",
+      "target": "16.39"
+    }
+  ]
+}

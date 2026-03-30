@@ -1,0 +1,26 @@
+{
+  "id": "masanorisuda/nvidia-nemotron-lora-train",
+  "title": "NVIDIA Nemotron LoRA Train",
+  "code_file": "train_lora.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "accelerator": "NvidiaRtxPro6000",
+  "enable_internet": false,
+  "competition_sources": [
+    "nvidia-nemotron-model-reasoning-challenge"
+  ],
+  "dataset_sources": [
+    "masanorisuda/nemotron-deps-wheels",
+    "masanorisuda/pytorch-nightly-cu128",
+    "masanorisuda/pytorch-runtime-cu128"
+  ],
+  "kernel_sources": [
+    "ryanholbrook/nvidia-utility-script"
+  ],
+  "model_sources": [
+    "metric/nemotron-3-nano-30b-a3b-bf16/transformers/default/1"
+  ],
+  "keywords": []
+}
