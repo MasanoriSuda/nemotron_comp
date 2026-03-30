@@ -54,7 +54,7 @@ Do NOT use Kaggle Python API for push - it ignores accelerator. Always use CLI v
 - **Local RTX 3090** (24GB VRAM) - too small for inference, use for code/data work only
 - Mamba/causal-conv1d CUDA extensions need Blackwell-compatible wheels
 - Output format: `\boxed{answer}` only (no "Rule:" prefix)
-- Oversampling: hard 3x, medium 2x, easy 1x
+- Oversampling: per-type via `OVERSAMPLE_RATES` dict in Cell 3 (Bit Manipulation 5x, Gravitational Constant 5x, Text Encryption 3x, Equation Transformation 3x, Unit Conversion 2x, Number Base Conversion 1x)
 
 ## Data
 - `train.csv`: ~9,500 samples (after 5% valid split -> ~9,025 train + ~475 valid)
