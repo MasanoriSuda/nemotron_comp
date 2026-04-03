@@ -2,6 +2,8 @@
 
 ## 現状スコア
 - **Best: v76 = 0.65** (フル学習, 9000件×2epoch, loss=0.694)
+- **v81 quick**: loss=0.45（CoT データ追加、1 epoch）→ **LB=0.58**（悪化、leakage=100%）
+- **v82 full**: loss=0.03（CoT + 全件2epoch）→ **LB=0.60**（悪化、過学習）
 - nemotron-sft-baseline LB = 0.66 (参考)
 - 理論上限（ルールベース完全習得）: ~0.85+
 
@@ -93,63 +95,57 @@ answer = 25.09 × 0.6636 = 16.65
 
 ---
 
-## フォーマット問題分析
+## 切り分け順（GPU 回復後の実験キュー）
 
-### 観察
-- quick run (3000/1 epoch) → reasoning 漏れ多発、boxed率 8〜13%
-- full run (v76) → boxed 率は高く 0.65 達成
-- **フォーマット問題は収束不足が原因、format 設計の問題ではない**
+各ステップは quick run（~1h）。前のステップの結果を受けて次を判断する。
 
-### 結論
-- フル学習すれば format は自然に学習される
-- CoT 付きデータでも \boxed{} を最後に出させれば format と accuracy を両立できる
+| Step | 実験 | 変更点 | 判定基準 |
+|------|------|--------|---------|
+| S1 | v83 | eval generation prompt に `enable_thinking=False` を明示（train 側は変わらない） | eval leakage が下がるか確認。train 本命修正は S2 |
+| S2 | v84 | CoT を `reasoning_content` に移動、`content` は `\boxed{}` のみ | Gravity/Unit accuracy が上がるか |
+| S3 | v85 | **Blackwell 上で** S2 の adapter を使い fast_path ON/OFF × use_cache ON/OFF を 2×2 eval | Mamba 実行経路の差異を確認（ローカル 3090 では不可） |
+| S4 | v86 | S2 + `torch.compile=OFF` | compile が悪影響か確認 |
+| S5 | v87 | S2 + LoRA target: `in_proj\|out_proj` のみ | MoE 除外の効果 |
+| S6 | v88 | S5 + `q_proj\|o_proj` 追加 | Attention 追加の効果 |
 
----
+`q_proj|v_proj` は S6 の後に検討。
 
-## 実験計画（proxy 基準：1800件/90件valid/1epoch）
+## 最有力仮説（S3/S4 完了前は未確定）
 
-### Proxy 設定（固定）
-- train: `proxy_train.csv`（各タイプ300件、seed=42）
-- valid: `proxy_valid.csv`（各タイプ15件、seed=42）
-- 評価指標: accuracy / boxed率 / format_valid率 / reasoning_leakage率（タイプ別）
+**thinking チャネル不整合（v81/v82 悪化の最有力仮説）**
 
-### 実験キュー（更新済み）
+chat_template の挙動：
+- `reasoning_content` なし → `<think></think>{content}`
+- `reasoning_content` あり → `<think>{reasoning}</think>{content}`
 
-| ID | 変更内容 | 対象仮説 | 期待効果 | 状態 |
-|----|----------|---------|---------|------|
-| E01 | v76 ベースライン（proxy 再現） | - | proxy と full の相関確認 | pending |
-| E02 | Gravity CoT データ追加（合成） | Gravity H2 | Gravity 0%→50%+ | pending |
-| E03 | Unit Conversion CoT データ追加（合成） | Unit H2 | Unit 不明→50%+ | pending |
-| E04 | E02+E03 同時（Gravity+Unit CoT） | 両方 | 合計33%の問題を改善 | pending |
-| E05 | タスク均衡化（各タイプ同数） | Number Base H1 | 不安定解消 | pending |
-| E06 | Bit Manipulation CoT データ追加 | Bit H2 | bit 0%→20%+ | pending |
-| E07 | lucian kucera データ追加（公開待ち） | Bit H3 | bit 0%→30%+ | blocked |
+現在の `to_record()` は CoT を `content` に直書き：
+```
+学習済みフォーマット: <think></think>g = 2×d/t²...\boxed{154.62}  ← CoT が think の外
+正しいフォーマット:   <think>\ng = 2×d/t²...\n</think>\n\boxed{154.62}
+```
 
-### 優先順位
-1. **E02 / E03**: Gravity・Unit は決定論的で CoT が直接効く → 最高の期待値
-2. **E05**: 均衡化はコスト低く安定性に寄与
-3. **E06**: Bit は難しいが 30% まで伸ばせれば大きい
+**修正コード（S2 で適用）**：
+```python
+{"role": "assistant", "reasoning_content": "g = 2×d/t²...", "content": "\\boxed{154.62}"}
+```
 
-### 判定基準
-- proxy で特定タイプ accuracy が +10% → フル学習に持ち込む
-- proxy で全タイプ変化なし → 変更不採用
+**その他の仮説（未切り分け）**
 
----
+- train `use_cache=False` / eval `use_cache=True` → Mamba 実行経路が不一致（S3 で切り分け）
+- `enable_thinking` 未指定 → eval generation prompt 側は S1 で修正、train 側の本命修正は S2
+- LoRA trainable 880M（うち 862M が MoE エキスパート）→ v76 も同じなので直接原因ではないが最適ではない（S5/S6 で比較）
+- MAX_SEQ_LEN=1024: CoT 付きでも最大 412 token → **問題なし**
+
+## GPU 時間制約
+
+- 週 30h / quick run ~1h → 週 ~25 本（バッファ込み）
+- medium run（1 epoch 全件）= ~5h → S2 が良ければ medium run で LB 確認
+- フル学習（2 epoch 全件）= 12h 超 → **Kaggle タイムアウト、使用不可**
 
 ## スコア試算
 
 | 状態 | Gravity | Unit | Bit | 他 | 予想スコア |
 |------|---------|------|-----|-----|----------|
-| 現状 v76 | ~0% | 不明 | ~0% | 中程度 | 0.65 |
-| Gravity+Unit CoT 修正後 | 90%+ | 90%+ | ~0% | 同 | **~0.73+** |
-| 全タイプ改善後 | 90%+ | 90%+ | 30% | 改善 | **~0.78+** |
-
----
-
-## GPU 時間予算
-
-| フェーズ | 時間 | 内訳 |
-|----------|------|------|
-| proxy 実験 | ~6h | 1時間×6本 |
-| フル学習 | ~12h | 6h×2本 |
-| 提出・バッファ | ~残り | - |
+| v76（現 best） | 不明 | 不明 | ~0% | 中程度 | 0.65 |
+| S2 後（CoT 正常化） | 90%+ | 90%+ | ~0% | 同 | **~0.72+** |
+| S6 後（LoRA 最適化） | 90%+ | 90%+ | ~0% | 改善 | **~0.75+** |
