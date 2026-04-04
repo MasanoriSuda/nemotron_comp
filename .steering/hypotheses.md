@@ -1,151 +1,101 @@
 # 弱点分析・仮説・実験計画
 
 ## 現状スコア
-- **Best: v76 = 0.65** (フル学習, 9000件×2epoch, loss=0.694)
-- **v81 quick**: loss=0.45（CoT データ追加、1 epoch）→ **LB=0.58**（悪化、leakage=100%）
-- **v82 full**: loss=0.03（CoT + 全件2epoch）→ **LB=0.60**（悪化、過学習）
-- nemotron-sft-baseline LB = 0.66 (参考)
-- 理論上限（ルールベース完全習得）: ~0.85+
+- **Best: v76 = 0.65** (全件, 1epoch, loss=0.694, answer-only)
+- **v81 quick**: loss=0.45（Gravity/Unit CoT, 1epoch）→ **LB=0.58**（悪化）
+- **v82 full**: loss=0.03（Gravity/Unit CoT 21,000件過学習）→ **LB=0.60**（悪化）
+- **v85 quick**: loss=0.65（Numeral CoT追加 + SYSTEM_PROMPT修正）→ **LB=0.67 ★ New Best**
+- 他者参考: 0.67（全6タイプ CoT 2,907件）, 0.68（CoT 1,200件）, 0.70（全タイプ CoT 7,200件）
 
 ---
 
-## タイプ別構造分析（EDA より）
+## 根本原因：CoT データ設計が間違っていた
 
-| タイプ | 件数 | 理論上限 | 解法構造 | 我々の現状 |
-|--------|------|---------|----------|-----------|
-| Number Base (Roman) | 1,576 | **100%** | 決定論的（ローマ数字） | 高め |
-| Gravitational Constant | 1,597 | **99.4%** | 決定論的（g = 2d/t²） | ~0% ← 最優先 |
-| Unit Conversion | 1,594 | **99.4%** | 決定論的（ratio抽出） | 不明 ← 要確認 |
-| Text Encryption | 1,576 | ~38% | 部分的（文字対応表） | 0% |
-| Bit Manipulation | 1,602 | 50-80% | LLM推論が必要 | ~0% |
-| Equation Transformation | 1,555 | 50-70% | LLM推論が必要 | ~0% |
+| 問題 | 我々（v81/v82） | 正解（0.67〜0.70モデル） |
+|------|----------------|------------------------|
+| CoT 対象タイプ | Gravity/Unit のみ（2/6） | 全6タイプ |
+| サンプル数 | 21,000（5x オーバーサンプリング） | 1,200〜3,000 |
+| 多様性 | 同じ式の繰り返し → loss=0.03 | 多様な推論 → loss=2.3 |
+| 検証 | 決定論的で100%正解 | LLM生成 + rule-based 検証フィルタ |
+| fast_path | デフォルト（ON） | 明示的に OFF |
 
-**重要**: Gravity と Unit Conversion は「能力問題」ではなく「計算手順の問題」。
-この2タイプだけで全問題の **33%** を占める。ここを解決すれば大幅スコアアップが見込める。
-
----
-
-## タイプ別弱点と根本原因仮説
-
-### Gravitational Constant（~0% 我々、理論上限 99.4%）← 最優先
-
-**解法**: 例から g を抽出 → d = 0.5 × g × t² で計算
-
-| 仮説 | 優先度 | 検証方法 |
-|------|--------|----------|
-| H1: 公式で計算せず「推定」している（"probably", "approximately" 等を出力） | ★★★ | raw 出力を確認 |
-| H2: CoT で明示的な計算手順を学習させれば 90%+ 達成可能 | ★★★ | CoT 付き合成データで検証 |
-
-**CoT テンプレート**:
-```
-g = 2 × 14.92 / 1.37² = 15.92
-g = 2 × 144.96 / 4.27² = 15.90
-...
-g_mean = 15.91
-d = 0.5 × 15.91 × 4.41² = 154.62
-\boxed{154.62}
-```
-
-### Unit Conversion（不明、理論上限 99.4%）← 優先度高
-
-**解法**: 例から ratio = output/input を抽出 → target × ratio
-
-| 仮説 | 優先度 | 検証方法 |
-|------|--------|----------|
-| H1: 比率を抽出・計算せず「推定」している | ★★★ | raw 出力を確認 |
-| H2: CoT で ratio 計算を明示すれば 90%+ 達成可能 | ★★★ | CoT 付き合成データで検証 |
-
-**CoT テンプレート**:
-```
-ratio = 6.69 / 10.08 = 0.6637
-ratio = 11.83 / 17.83 = 0.6635
-...
-ratio_mean = 0.6636
-answer = 25.09 × 0.6636 = 16.65
-\boxed{16.65}
-```
-
-### Bit Manipulation（~0% 我々、30% 他者、理論上限 50-80%）
-
-| 仮説 | 優先度 | 検証方法 |
-|------|--------|----------|
-| H1: 出力が10進数になっている（採点ロジック変更で厳密一致必要） | ★★★ | eval の raw 出力を見る |
-| H2: ビット演算ルールを例から推論できない（能力問題） | ★★ | CoT 付きデータで改善するか |
-| H3: lucian kucera のデータセット（公開予定）で改善できる | ★★ | データセット公開後に追加 |
-
-### Text Encryption（0% 全員、理論上限 ~38%）← 後回し
-
-| 仮説 | 優先度 | 検証方法 |
-|------|--------|----------|
-| H1: 文字対応表を例から再現できない（部分的に構造的限界） | ★★ | CoT でどこまで改善するか |
-| H2: ルールベースで 38% は取れるが残りは本質的に難しい | ★ | - |
-
-### Equation Transformation（~0% 我々、6% 他者）← 後回し
-
-| 仮説 | 優先度 | 検証方法 |
-|------|--------|----------|
-| H1: データ品質問題（一意に決まらない問題あり） | ★★ | 問題を手動確認 |
-| H2: 記号変換ルールが複雑すぎる | ★ | - |
-
-### Number Base Conversion（高め、ただし不安定）
-
-| 仮説 | 優先度 | 検証方法 |
-|------|--------|----------|
-| H1: 他タイプの学習が強すぎて崩れている | ★★ | 均衡学習で改善するか |
+**CoT フォーマット（`<think>` の扱い）は誤差範囲**  
+0.70 モデルも `content` 直書き（`<think></think>CoT\boxed{}`）で成功 → 最有力仮説から降格
 
 ---
 
-## 切り分け順（GPU 回復後の実験キュー）
+## タイプ別分析（他者実績込み）
 
-各ステップは quick run（~1h）。前のステップの結果を受けて次を判断する。
+| タイプ | 件数 | CoT pass rate（他者実績） | 対策 |
+|--------|------|--------------------------|------|
+| Gravity | 1,597 | 99.7%（決定論的） | 生成済み ✓ |
+| Unit | 1,594 | 88.7% | 生成済み ✓ |
+| Numeral | 1,576 | 99.6%（決定論的） | 未実装（自動生成可） |
+| Text Encryption | 1,576 | **94.3%（77語辞書埋め込みで劇的改善）** | Alice 77語辞書を入手して生成 |
+| Bit Manipulation | 1,602 | 40.3%（難） | トレースデータ待ち |
+| Equation Transformation | 1,555 | 13.6%（最難） | 後回し |
 
-| Step | 実験 | 変更点 | 判定基準 |
-|------|------|--------|---------|
-| S1 | v83 | eval generation prompt に `enable_thinking=False` を明示（train 側は変わらない） | eval leakage が下がるか確認。train 本命修正は S2 |
-| S2 | v84 | CoT を `reasoning_content` に移動、`content` は `\boxed{}` のみ | Gravity/Unit accuracy が上がるか |
-| S3 | v85 | **Blackwell 上で** S2 の adapter を使い fast_path ON/OFF × use_cache ON/OFF を 2×2 eval | Mamba 実行経路の差異を確認（ローカル 3090 では不可） |
-| S4 | v86 | S2 + `torch.compile=OFF` | compile が悪影響か確認 |
-| S5 | v87 | S2 + LoRA target: `in_proj\|out_proj` のみ | MoE 除外の効果 |
-| S6 | v88 | S5 + `q_proj\|o_proj` 追加 | Attention 追加の効果 |
+---
 
-`q_proj|v_proj` は S6 の後に検討。
+## CoT データ生成方針（修正版）
 
-## 最有力仮説（S3/S4 完了前は未確定）
+### 目標
+- 全タイプ合計 **1,500〜3,000 件**（少量・多様・検証済み）
+- fast_path OFF は OOM → **使用不可**（PRO6000 でも 94GB 超える）
+- オーバーサンプリングしない
+- SYSTEM_PROMPT から `Do not explain your reasoning` を削除（CoT 出力と矛盾するため）
 
-**thinking チャネル不整合（v81/v82 悪化の最有力仮説）**
+### タイプ別アクション
 
-chat_template の挙動：
-- `reasoning_content` なし → `<think></think>{content}`
-- `reasoning_content` あり → `<think>{reasoning}</think>{content}`
+| タイプ | 方法 | 優先度 |
+|--------|------|--------|
+| Gravity | 決定論的生成（実装済み）→ 400件に絞る | 完了 |
+| Unit | 決定論的生成（実装済み）→ 700件に絞る | 完了 |
+| Numeral | 決定論的生成（実装予定）→ 300件 | ★★★ すぐできる |
+| Text Encryption | Alice 77語辞書入手 → Claude で生成 → 検証 → 700件 | ★★★ |
+| Bit Manipulation | トレースプロンプト付き生成 → 検証 → 607件（全正解） | ★★ データ待ち |
+| Equation | Claude で生成 → 検証 → 200件（全正解） | ★ 後回し |
 
-現在の `to_record()` は CoT を `content` に直書き：
-```
-学習済みフォーマット: <think></think>g = 2×d/t²...\boxed{154.62}  ← CoT が think の外
-正しいフォーマット:   <think>\ng = 2×d/t²...\n</think>\n\boxed{154.62}
-```
+---
 
-**修正コード（S2 で適用）**：
-```python
-{"role": "assistant", "reasoning_content": "g = 2×d/t²...", "content": "\\boxed{154.62}"}
-```
+## 実験キュー
 
-**その他の仮説（未切り分け）**
+各ステップは quick run（~1h）。`\boxed{}` 出力率と accuracy を判定基準にする。
 
-- train `use_cache=False` / eval `use_cache=True` → Mamba 実行経路が不一致（S3 で切り分け）
-- `enable_thinking` 未指定 → eval generation prompt 側は S1 で修正、train 側の本命修正は S2
-- LoRA trainable 880M（うち 862M が MoE エキスパート）→ v76 も同じなので直接原因ではないが最適ではない（S5/S6 で比較）
-- MAX_SEQ_LEN=1024: CoT 付きでも最大 412 token → **問題なし**
+| Step | 実験 | 変更点 | 結果 |
+|------|------|--------|------|
+| S1 | v83 | fast_path OFF | ✗ OOM クラッシュ |
+| S2 | v84 | fast_path 戻す + Numeral CoT + オーバーサンプリング全1x | `\boxed{}` 未出力（SYSTEM_PROMPT 矛盾）→ 中断 |
+| S3 | **v85** | SYSTEM_PROMPT から `Do not explain your reasoning` 削除 | **LB=0.67 ★ New Best** |
+| S4 | v86 | S3 + Text Encryption CoT（77語辞書）追加 | pending |
+| S5 | v87 | S4 + Bit CoT（トレースデータ）追加 | pending |
+| S6 | v88 | S5 + LoRA target `in_proj\|out_proj` のみ | pending |
+
+---
 
 ## GPU 時間制約
 
-- 週 30h / quick run ~1h → 週 ~25 本（バッファ込み）
-- medium run（1 epoch 全件）= ~5h → S2 が良ければ medium run で LB 確認
-- フル学習（2 epoch 全件）= 12h 超 → **Kaggle タイムアウト、使用不可**
+- 週 30h / quick run ~1h → 週 ~25 本
+- medium run（1 epoch 全件）= ~5h → S2 以降で LB 確認に使う
+- フル学習（2 epoch 全件）= 12h 超 → **タイムアウト、使用不可**
+
+---
 
 ## スコア試算
 
-| 状態 | Gravity | Unit | Bit | 他 | 予想スコア |
-|------|---------|------|-----|-----|----------|
-| v76（現 best） | 不明 | 不明 | ~0% | 中程度 | 0.65 |
-| S2 後（CoT 正常化） | 90%+ | 90%+ | ~0% | 同 | **~0.72+** |
-| S6 後（LoRA 最適化） | 90%+ | 90%+ | ~0% | 改善 | **~0.75+** |
+| 状態 | 予想スコア |
+|------|-----------|
+| v76（現 best） | 0.65 |
+| S1（全タイプ CoT, 少量）| **0.67〜0.68** |
+| S2（+ Text Encryption 辞書）| **0.69〜0.70** |
+| S3（+ Bit CoT）| **0.71〜0.72** |
+| S5（+ LoRA 最適化）| **0.73+** |
+
+---
+
+## その他の仮説（優先度低）
+
+- `thinking チャネル不整合`: 0.70 モデルも同じ形式で成功 → 優先度を降格
+- `use_cache ON/OFF`: Mamba 実行経路の差異 → 後回し
+- `torch.compile OFF`: 安定性確認のため 1本取りたい → S5 以降
+- `MAX_SEQ_LEN=1024`: CoT 付きでも最大 412 token → 問題なし
